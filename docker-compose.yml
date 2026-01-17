@@ -1,7 +1,8 @@
-version: '3.8'
+version: "3.8"
 services:
   web:
-    build: .
+    image: ghcr.io/zozinnovations/zoz-website:latest
+    container_name: zoz-website
+    restart: unless-stopped
     ports:
       - "8080:8080"
-    restart: always
