@@ -1,3 +1,7 @@
+www.zozinnovations.com {
+  redir https://zozinnovations.com{uri} permanent
+}
+
 zozinnovations.com {
   root * /srv
   encode gzip
