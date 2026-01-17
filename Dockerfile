@@ -9,20 +9,20 @@ RUN npm run build
 # Production Stage
 FROM caddy:2.7-alpine
 
-# Security updates
 RUN apk update && apk upgrade --no-cache
 
-# Create caddy user
-RUN adduser -D caddy
+# allow binding to 80/443 as non-root
+RUN apk add --no-cache libcap \
+  && setcap 'cap_net_bind_service=+ep' /usr/bin/caddy
 
-# Copy assets
+# create caddy user if missing (idempotent)
+RUN addgroup -S caddy || true \
+  && adduser -S -D -H -G caddy caddy || true
+
 COPY --from=builder /app/dist /srv
 COPY Caddyfile /etc/caddy/Caddyfile
 
-# Grant permissions
-RUN chown -R caddy:caddy /srv && \
-    mkdir -p /config/caddy /data/caddy && \
-    chown -R caddy:caddy /config /data
+RUN mkdir -p /config/caddy /data/caddy /srv && \
+    chown -R caddy:caddy /srv /config /data
 
-# Run as non-root user
 USER caddy
