@@ -196,6 +196,12 @@ section {
     align-items: flex-end;
 }
 
+#project-launchready {
+    background-image: url('/launchready-bg.webp');
+    background-size: cover;
+    background-position: center;
+}
+
 .project-content {
     padding: 20px;
     width: 100%;
