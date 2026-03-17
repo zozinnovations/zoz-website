@@ -263,13 +263,13 @@ footer {
 }
 
 #project-sugar-tax {
-    background-image: url('/sugar-tax-bg.png');
+    background-image: url('/sugar-tax-bg.webp');
     background-size: cover;
     background-position: top center;
 }
 
 #project-resonance {
-    background-image: url('/resonance-bg.png');
+    background-image: url('/resonance-bg.webp');
     background-size: cover;
     background-position: center;
 }
