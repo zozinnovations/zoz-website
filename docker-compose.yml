@@ -3,6 +3,14 @@ services:
     image: ghcr.io/zozinnovations/zoz-website:latest
     container_name: zoz-website
     restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
+    networks:
+      - web-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.zoz.rule=Host(`zozinnovations.com`, `www.zozinnovations.com`)"
+      - "traefik.http.routers.zoz.entrypoints=websecure"
+      - "traefik.http.routers.zoz.tls.certresolver=myresolver"
+
+networks:
+  web-network:
+    external: true
