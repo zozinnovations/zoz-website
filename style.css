@@ -185,6 +185,13 @@ section {
 }
 
 /* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
 .project-item {
     position: relative;
     height: 300px;
@@ -264,6 +271,10 @@ footer {
     }
 
     .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
