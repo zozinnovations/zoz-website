@@ -7,7 +7,7 @@ services:
       - web-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.zoz.rule=Host(`zozinnovations.com`, `www.zozinnovations.com`)"
+      - "traefik.http.routers.zoz.rule=Host(`zozinnovations.com`) || Host(`www.zozinnovations.com`)"
       - "traefik.http.routers.zoz.entrypoints=websecure"
       - "traefik.http.routers.zoz.tls.certresolver=myresolver"
       - "traefik.http.services.zoz.loadbalancer.server.port=80"
