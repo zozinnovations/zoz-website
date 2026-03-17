@@ -1,8 +1,4 @@
-www.zozinnovations.com {
-  redir https://zozinnovations.com{uri} permanent
-}
-
-zozinnovations.com {
+:80 {
   root * /srv
   encode gzip
   file_server
