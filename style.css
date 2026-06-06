@@ -186,10 +186,15 @@ section {
 
 /* Projects */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 40px;
+}
+
+.projects-grid .project-item {
+    flex: 0 1 calc(33.333% - 20px);
 }
 
 .project-item {

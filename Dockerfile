@@ -1,5 +1,5 @@
 # Build Stage
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # Production Stage
-FROM caddy:2.7-alpine
+FROM caddy:2.8-alpine
 
 RUN apk update && apk upgrade --no-cache
 
@@ -23,6 +23,6 @@ COPY --from=builder /app/dist /srv
 COPY Caddyfile /etc/caddy/Caddyfile
 
 RUN mkdir -p /config/caddy /data/caddy /srv && \
-    chown -R caddy:caddy /srv /config /data
+  chown -R caddy:caddy /srv /config /data
 
 USER caddy
