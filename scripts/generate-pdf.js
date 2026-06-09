@@ -20,6 +20,18 @@ await page.goto('http://localhost:5173/company-profile.html', {
 // Wait for fonts and animations to settle
 await new Promise(r => setTimeout(r, 1500));
 
+// Replace gradient-text with solid white — background-clip:text renders
+// as transparent in Preview and Adobe Reader PDF engines
+await page.addStyleTag({
+    content: `
+        .gradient-text {
+            background: none !important;
+            -webkit-text-fill-color: #ffffff !important;
+            color: #ffffff !important;
+        }
+    `
+});
+
 await page.pdf({
     path: outputPath,
     format: 'A4',
