@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZOZ Innovations FZCO — Company Profile</title>
+    <meta name="description"
+        content="ZOZ Innovations FZCO — AI Products, Mobile Apps & Digital Launch Systems. UAE-based technology studio in Dubai." />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        /* ── Pitch Deck Overrides ── */
+        .cp-section {
+            min-height: 100vh;
+            padding: 110px 0 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            position: relative;
+            border-bottom: 1px solid var(--glass-border);
+            break-after: page;
+        }
+
+        .cp-section > .container {
+            width: 100%;
+        }
+
+        .cp-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .slide-num {
+            position: absolute;
+            top: 115px;
+            right: 24px;
+            font-size: 0.7rem;
+            color: #2a2a2a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .cp-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            margin-bottom: 22px;
+        }
+
+        .cp-h2 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 18px;
+            line-height: 1.1;
+            width: fit-content;
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+            margin-bottom: 40px;
+        }
+
+        .divider-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Service blocks (slide 3) */
+        .service-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: border-color 0.3s;
+        }
+
+        .service-block:hover {
+            border-color: var(--accent-color);
+        }
+
+        .service-block h3 {
+            font-size: 1.15rem;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+
+        .service-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-block ul li {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .service-block ul li:last-child {
+            border-bottom: none;
+        }
+
+        .service-block ul li::before {
+            content: "→ ";
+            color: var(--accent-color);
+            opacity: 0.55;
+        }
+
+        /* Tech pills */
+        .tech-pill {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255, 85, 0, 0.08);
+            border: 1px solid rgba(255, 85, 0, 0.25);
+            border-radius: 20px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            margin: 4px;
+        }
+
+        /* Why ZOZ cards */
+        .why-card {
+            text-align: center;
+            padding: 40px 28px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .why-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-4px);
+        }
+
+        .why-icon {
+            font-size: 2.4rem;
+            margin-bottom: 18px;
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* Contact grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: border-color 0.3s, transform 0.3s;
+            color: inherit;
+        }
+
+        .contact-item:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .contact-label {
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .contact-value {
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        /* Cover */
+        .cover-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 80vh;
+        }
+
+        .cover-logo {
+            height: 72px;
+            margin-bottom: 32px;
+            filter: drop-shadow(0 0 20px rgba(255, 85, 0, 0.45));
+        }
+
+        .cover-title {
+            font-size: clamp(2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .cover-tagline {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .cover-location {
+            font-size: 0.85rem;
+            color: #444;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        .cover-contacts {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cover-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: 1px solid var(--glass-border);
+            border-radius: 6px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        .cover-link:hover {
+            border-color: var(--accent-color);
+            color: var(--text-primary);
+        }
+
+        /* Responsive 2-col grid */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .slide-num {
+                display: none;
+            }
+
+            .cp-section {
+                padding: 90px 0 60px;
+            }
+        }
+
+        /* Print / PDF */
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            header,
+            .print-btn,
+            footer {
+                display: none !important;
+            }
+
+            body {
+                background: #050505;
+            }
+
+            .cp-section {
+                page-break-after: always;
+                break-after: page;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                height: 100vh;
+                min-height: 0;
+                overflow: hidden;
+                padding-top: 38px !important;
+                padding-bottom: 24px !important;
+            }
+
+            .slide-num {
+                top: 18px;
+            }
+
+            /* Chrome print engine often triggers mobile breakpoints — force 4 col */
+            .grid-4col {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+
+            /* Compact headings */
+            .cp-h2 {
+                font-size: 2rem !important;
+                margin-bottom: 10px !important;
+            }
+
+            .divider {
+                margin-bottom: 20px !important;
+            }
+
+            .cp-tag {
+                margin-bottom: 12px !important;
+            }
+
+            /* Compact grids and cards */
+            .grid {
+                gap: 14px !important;
+                margin-top: 16px !important;
+            }
+
+            .card {
+                padding: 14px 18px !important;
+            }
+
+            .service-block {
+                padding: 18px !important;
+            }
+
+            /* Reduce phone mockup so iPhone slide fits one page */
+            .phone-mockup {
+                height: 240px !important;
+                width: 130px !important;
+                border-radius: 28px !important;
+            }
+
+            .phone-label {
+                font-size: 0.65rem !important;
+            }
+
+            .phone-specs {
+                font-size: 0.62rem !important;
+            }
+
+            /* Compact feature list */
+            .feature-row {
+                gap: 10px !important;
+            }
+
+            .feature-item h4 {
+                font-size: 0.85rem !important;
+                margin-bottom: 2px !important;
+            }
+
+            .feature-item p {
+                font-size: 0.78rem !important;
+            }
+
+            /* Compact project cards */
+            .project-card {
+                padding: 12px 14px !important;
+                margin-bottom: 8px !important;
+            }
+
+            /* Reduce intro paragraph spacing in two-col sections */
+            .two-col > div > p:first-child {
+                margin-bottom: 16px !important;
+            }
+
+            /* Compact why-cards */
+            .why-card {
+                padding: 24px 18px !important;
+            }
+
+            /* Compact contact grid */
+            .contact-grid {
+                margin-top: 24px !important;
+                gap: 12px !important;
+            }
+
+            .contact-item {
+                padding: 18px 14px !important;
+            }
+
+            /* Compact stat row */
+            .stat-row {
+                margin-top: 20px !important;
+                gap: 30px !important;
+            }
+        }
+
+        /* Floating download button */
+        .print-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            background: var(--accent-color);
+            color: #000;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 24px rgba(255, 85, 0, 0.45);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 32px rgba(255, 85, 0, 0.65);
+        }
+
+        .stat-row {
+            display: flex;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item p:first-child {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-color);
+        }
+
+        .stat-item p:last-child {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .quote-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--glass-border);
+            border-left: 3px solid var(--accent-color);
+            padding: 22px 28px;
+            border-radius: 4px;
+            margin-top: 36px;
+        }
+
+        .quote-block .quote-label {
+            font-size: 0.72rem;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .quote-block p {
+            font-size: 1.15rem;
+            color: #fff;
+            font-style: italic;
+        }
+
+        .feature-row {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .feature-arrow {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .feature-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        .phone-mockup {
+            width: 200px;
+            height: 400px;
+            background: var(--bg-secondary);
+            border-radius: 36px;
+            border: 2px solid rgba(255, 85, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 0 40px rgba(255, 85, 0, 0.1);
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 16px;
+            width: 72px;
+            height: 5px;
+            background: #1a1a1a;
+            border-radius: 3px;
+        }
+
+        .phone-icon {
+            font-size: 2rem;
+        }
+
+        .phone-label {
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .phone-specs {
+            color: var(--text-secondary);
+            font-size: 0.72rem;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 85, 0, 0.2);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .project-card .p-label {
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .project-card a {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BG glow -->
+    <div style="position:fixed;top:-20%;right:-10%;width:50vw;height:50vw;background:radial-gradient(circle,rgba(255,85,0,0.12) 0%,rgba(0,0,0,0) 70%);z-index:-1;pointer-events:none;"></div>
+    <div style="position:fixed;bottom:-20%;left:-10%;width:50vw;height:50vw;background:radial-gradient(circle,rgba(255,85,0,0.07) 0%,rgba(0,0,0,0) 70%);z-index:-1;pointer-events:none;"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <img src="/logo.svg" alt="ZOZ Logo">
+                    <span><span class="accent-text">ZOZ</span> INNOVATIONS FZCO</span>
+                </a>
+                <div class="nav-links">
+                    <a href="/#services">Services</a>
+                    <a href="/#projects">Projects</a>
+                    <a href="/#blog">Blog</a>
+                    <a href="/company-profile.html">Company Profile</a>
+                    <a href="/#contact" class="btn">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── 01 COVER ── -->
+        <section class="cp-section" id="cover">
+            <div class="container">
+                <div class="cover-wrap">
+                    <img src="/logo.svg" alt="ZOZ Logo" class="cover-logo">
+                    <h1 class="cover-title gradient-text">ZOZ INNOVATIONS FZCO</h1>
+                    <p class="cover-tagline">Apps &nbsp;•&nbsp; Websites &nbsp;•&nbsp; AI Tools</p>
+                    <p class="cover-location">Dubai, UAE &nbsp;—&nbsp; IFZA Licensed &nbsp;—&nbsp; 2026</p>
+                    <div class="divider divider-center"></div>
+                    <div class="cover-contacts">
+                        <a href="https://zozinnovations.com" target="_blank" class="cover-link">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            zozinnovations.com
+                        </a>
+                        <a href="mailto:info@zozinnovations.com" class="cover-link">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            info@zozinnovations.com
+                        </a>
+                        <a href="https://wa.me/971547021511" target="_blank" class="cover-link" style="color:#25D366;border-color:rgba(37,211,102,0.3);">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.506-.669-.516l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+                            +971 54 702 1511
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">01 / 10</span>
+        </section>
+
+        <!-- ── 02 ABOUT ── -->
+        <section class="cp-section" id="about">
+            <div class="container">
+                <span class="cp-tag">About</span>
+                <h2 class="cp-h2 gradient-text">Who We Are</h2>
+                <div class="divider"></div>
+                <div style="max-width:680px;">
+                    <p style="font-size:1.2rem;color:var(--text-secondary);line-height:1.85;margin-bottom:26px;">
+                        We are a <strong style="color:#fff;">technology company based in Dubai</strong>. We build apps, websites and AI tools that help businesses get more customers and grow faster.
+                    </p>
+                    <p style="font-size:1rem;color:var(--text-secondary);line-height:1.85;margin-bottom:36px;">
+                        Whether you need a mobile app, a website, or an AI assistant that answers customer questions automatically — we build it for you. Fast, professional, and ready to use.
+                    </p>
+                    <div class="quote-block">
+                        <p class="quote-label">Our Goal</p>
+                        <p>"Build things that help your business grow."</p>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px;">
+                        <div style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:10px;padding:16px 20px;">
+                            <p style="font-size:0.68rem;color:var(--accent-color);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Founded</p>
+                            <p style="font-size:1.25rem;font-weight:700;color:#fff;">May 2024</p>
+                        </div>
+                        <div style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:10px;padding:16px 20px;">
+                            <p style="font-size:0.68rem;color:var(--accent-color);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Founders</p>
+                            <p style="font-size:1.25rem;font-weight:700;color:#fff;">2</p>
+                        </div>
+                        <div style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:10px;padding:16px 20px;">
+                            <p style="font-size:0.68rem;color:var(--accent-color);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">IFZA License</p>
+                            <p style="font-size:1.25rem;font-weight:700;color:#fff;">45432</p>
+                        </div>
+                        <div style="background:var(--bg-secondary);border:1px solid var(--glass-border);border-radius:10px;padding:16px 20px;">
+                            <p style="font-size:0.68rem;color:var(--accent-color);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">DUNS Number</p>
+                            <p style="font-size:1.25rem;font-weight:700;color:#fff;">57-123-7230</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">02 / 10</span>
+        </section>
+
+        <!-- ── 03 WHAT WE BUILD ── -->
+        <section class="cp-section" id="what-we-build">
+            <div class="container">
+                <span class="cp-tag">Services</span>
+                <h2 class="cp-h2 gradient-text">What We Build</h2>
+                <div class="divider"></div>
+                <div class="grid grid-4col">
+                    <div class="service-block">
+                        <h3>AI Tools</h3>
+                        <ul>
+                            <li>AI Customer Assistant</li>
+                            <li>AI Chatbot for your Website</li>
+                            <li>Automated Workflows</li>
+                        </ul>
+                    </div>
+                    <div class="service-block">
+                        <h3>Mobile Apps</h3>
+                        <ul>
+                            <li>iPhone App</li>
+                            <li>First Version in Weeks</li>
+                            <li>App Store Launch</li>
+                        </ul>
+                    </div>
+                    <div class="service-block">
+                        <h3>Websites</h3>
+                        <ul>
+                            <li>Business Website</li>
+                            <li>Online Shop or Platform</li>
+                            <li>Product Page</li>
+                        </ul>
+                    </div>
+                    <div class="service-block">
+                        <h3>AI Videos</h3>
+                        <ul>
+                            <li>Product Video</li>
+                            <li>Social Media Content</li>
+                            <li>Brand Video</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">03 / 10</span>
+        </section>
+
+        <!-- ── 04 AI TOOLS ── -->
+        <section class="cp-section" id="ai-solutions">
+            <div class="container">
+                <span class="cp-tag">AI Tools</span>
+                <h2 class="cp-h2 gradient-text">AI Tools for Your Business</h2>
+                <div class="divider"></div>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-bottom:48px;">
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3>AI Customer Assistant</h3>
+                        <p>A digital assistant that answers customer questions, sends information, and books appointments — automatically, day and night. No extra staff needed.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3>AI Chatbot for your Website</h3>
+                        <p>A chat window on your website that answers visitor questions instantly. We set it up with your information and it is ready within days.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3>Automated Workflows</h3>
+                        <p>Repetitive tasks in your business — emails, confirmations, data entry — handled automatically by AI so your team can focus on what matters.</p>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-size:0.7rem;color:var(--text-secondary);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Built with</p>
+                    <div>
+                        <span class="tech-pill">OpenAI</span>
+                        <span class="tech-pill">Claude AI</span>
+                        <span class="tech-pill">n8n</span>
+                        <span class="tech-pill">WhatsApp API</span>
+                        <span class="tech-pill">ElevenLabs</span>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">04 / 10</span>
+        </section>
+
+        <!-- ── 05 MOBILE APPS ── -->
+        <section class="cp-section" id="mobile-apps">
+            <div class="container">
+                <span class="cp-tag">Mobile Apps</span>
+                <h2 class="cp-h2 gradient-text">iPhone Apps</h2>
+                <div class="divider"></div>
+                <div class="two-col">
+                    <div>
+                        <p style="font-size:1.05rem;color:var(--text-secondary);margin-bottom:32px;line-height:1.85;">
+                            We build apps that your customers can download on their iPhone. We handle everything — from the first design to the App Store.
+                        </p>
+                        <div class="feature-row">
+                            <div class="feature-item">
+                                <div>
+                                    <h4>iPhone App</h4>
+                                    <p>A professional app for your business, available to download on iPhone.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <h4>First Version in Weeks</h4>
+                                    <p>We build a working first version quickly so you can start using it fast.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <h4>AI Inside the App</h4>
+                                    <p>Add AI features to your app — chat, recommendations, automation.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div>
+                                    <h4>App Store Launch</h4>
+                                    <p>We submit and publish the app. Your customers can find it on the App Store.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <p class="phone-label">iOS App</p>
+                            <p class="phone-specs">Native SwiftUI<br>AI-Powered<br>App Store Ready</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">05 / 10</span>
+        </section>
+
+        <!-- ── 06 WEBSITES ── -->
+        <section class="cp-section" id="launch-systems">
+            <div class="container">
+                <span class="cp-tag">Websites</span>
+                <h2 class="cp-h2 gradient-text">Websites for Your Business</h2>
+                <div class="divider"></div>
+                <p style="font-size:1.05rem;color:var(--text-secondary);max-width:620px;margin-bottom:36px;line-height:1.85;">
+                    We build professional websites that bring you new customers — ready in days, not months.
+                </p>
+                <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:36px;">
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">Business Website</h3>
+                        <p style="font-size:0.88rem;">A complete website for your company — with your services, contact form, and WhatsApp button.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">Product Page</h3>
+                        <p style="font-size:0.88rem;">A single page that presents your product clearly and gets visitors to contact you.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">Online Platform</h3>
+                        <p style="font-size:0.88rem;">A web application where your customers can log in, order, or manage their account.</p>
+                    </div>
+                </div>
+                <div class="project-card" style="max-width:480px;">
+                    <p class="p-label">Featured Project</p>
+                    <a href="https://sugartaxuae.ae" target="_blank">SugarTaxUAE.ae →</a>
+                    <p>First UAE Sugar Tax Calculator — launched ahead of the 2026 regulation.</p>
+                </div>
+            </div>
+            <span class="slide-num">06 / 10</span>
+        </section>
+
+        <!-- ── 07 AI MEDIA ── -->
+        <section class="cp-section" id="ai-media">
+            <div class="container">
+                <span class="cp-tag">AI Media</span>
+                <h2 class="cp-h2 gradient-text">AI Videos for Your Brand</h2>
+                <div class="divider"></div>
+                <p style="font-size:1.05rem;color:var(--text-secondary);max-width:580px;margin-bottom:40px;line-height:1.85;">
+                    We create professional videos for your business using AI — fast, affordable, and without a traditional film crew.
+                </p>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:40px;">
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">Product Video</h3>
+                        <p style="font-size:0.88rem;">A professional video that shows your product or service — at a fraction of normal production costs.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">Social Media Content</h3>
+                        <p style="font-size:0.88rem;">Short videos for Instagram, TikTok, and YouTube that get people's attention and grow your following.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">Brand Video</h3>
+                        <p style="font-size:0.88rem;">A video that introduces your company and explains what you do — perfect for your website or WhatsApp.</p>
+                    </div>
+                    <div class="card" style="border-color:rgba(255,85,0,0.2);">
+                        <h3 style="font-size:1rem;">AI Brand Character</h3>
+                        <p style="font-size:0.88rem;">A digital person that represents your brand in videos — always available, always on-brand.</p>
+                    </div>
+                </div>
+                <div class="project-card" style="max-width:480px;">
+                    <p class="p-label">Featured Work</p>
+                    <a href="https://www.youtube.com/watch?v=PPoEuyyhVPs" target="_blank">The Secret Life of Resonance →</a>
+                    <p>AI Film — Submitted to the 1 Billion Summit, Dubai 2025.</p>
+                </div>
+            </div>
+            <span class="slide-num">07 / 10</span>
+        </section>
+
+        <!-- ── 08 CLOUD & DEVOPS ── -->
+        <section class="cp-section" id="cloud-devops">
+            <div class="container">
+                <span class="cp-tag">Infrastructure</span>
+                <h2 class="cp-h2 gradient-text">Hosting & Technical Setup</h2>
+                <div class="divider"></div>
+                <p style="font-size:1.05rem;color:var(--text-secondary);max-width:580px;margin-bottom:44px;line-height:1.85;">
+                    We take care of all the technical setup — your website or app runs fast, is always online, and is protected.
+                </p>
+                <div style="margin-bottom:32px;">
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">AWS</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Cloudflare</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Docker</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">CI/CD</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Nginx / Caddy</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">PostgreSQL</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Redis</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">SSL / Security</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Auto Deployment</span>
+                </div>
+                <p style="font-size:0.7rem;color:var(--text-secondary);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Payment Integration</p>
+                <div style="margin-bottom:32px;">
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Stripe</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">PayPal</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Crypto</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Apple Pay</span>
+                    <span class="tech-pill" style="font-size:0.9rem;padding:9px 18px;">Google Pay</span>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:500px;">
+                    <div style="text-align:center;">
+                        <p style="font-size:2.2rem;font-weight:800;color:var(--accent-color);">99.9%</p>
+                        <p style="color:var(--text-secondary);font-size:0.82rem;">Uptime Target</p>
+                    </div>
+                    <div style="text-align:center;">
+                        <p style="font-size:2.2rem;font-weight:800;color:var(--accent-color);">&lt;24h</p>
+                        <p style="color:var(--text-secondary);font-size:0.82rem;">Deploy Time</p>
+                    </div>
+                    <div style="text-align:center;">
+                        <p style="font-size:2.2rem;font-weight:800;color:var(--accent-color);">EU/UAE</p>
+                        <p style="color:var(--text-secondary);font-size:0.82rem;">Data Regions</p>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">08 / 10</span>
+        </section>
+
+        <!-- ── 09 WHY ZOZ ── -->
+        <section class="cp-section" id="why-zoz">
+            <div class="container">
+                <span class="cp-tag">Why ZOZ</span>
+                <h2 class="cp-h2 gradient-text">Why Choose ZOZ</h2>
+                <div class="divider"></div>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
+                    <div class="why-card">
+                        <h3>Fast</h3>
+                        <p>We deliver quickly. Your first version is ready in weeks, not months — so you can start using it and growing your business fast.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>AI in Everything</h3>
+                        <p>Every product we build uses AI where it makes sense — so your business works smarter and saves time from day one.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>Based in Dubai</h3>
+                        <p>We are a licensed company in Dubai. You can meet us, call us, and work with us directly — no overseas agencies.</p>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">09 / 10</span>
+        </section>
+
+        <!-- ── 10 CONTACT ── -->
+        <section class="cp-section" id="contact">
+            <div class="container">
+                <div style="display:flex;flex-direction:column;align-items:center;text-align:center;min-height:60vh;justify-content:center;">
+                    <span class="cp-tag">Contact</span>
+                    <h2 class="cp-h2 gradient-text" style="width:auto;text-align:center;font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:14px;">Let's Build Together</h2>
+                    <div class="divider divider-center"></div>
+                    <p style="color:var(--text-secondary);margin-bottom:44px;font-size:1rem;max-width:480px;">
+                        Ready to start? Reach out — we respond within 24 hours.
+                    </p>
+                    <div class="contact-grid" style="max-width:760px;width:100%;">
+                        <a href="https://zozinnovations.com" target="_blank" class="contact-item">
+                            <p class="contact-label">Website</p>
+                            <p class="contact-value">zozinnovations.com</p>
+                        </a>
+                        <a href="mailto:info@zozinnovations.com" class="contact-item">
+                            <p class="contact-label">E-Mail</p>
+                            <p class="contact-value">info@zozinnovations.com</p>
+                        </a>
+                        <a href="https://wa.me/971547021511" target="_blank" class="contact-item" style="border-color:rgba(37,211,102,0.3);">
+                            <p class="contact-label" style="color:#25D366;">WhatsApp</p>
+                            <p class="contact-value">+971 54 702 1511</p>
+                        </a>
+                    </div>
+                    <div style="margin-top:50px;">
+                        <img src="/logo.svg" alt="ZOZ Logo" style="height:44px;opacity:0.4;margin-bottom:14px;display:block;margin-left:auto;margin-right:auto;">
+                        <p style="font-size:0.75rem;color:#333;letter-spacing:1px;">ZOZ INNOVATIONS FZCO &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; 2026</p>
+                        <p style="font-size:0.75rem;color:#333;margin-top:4px;">Confidential Company Profile</p>
+                    </div>
+                </div>
+            </div>
+            <span class="slide-num">10 / 10</span>
+        </section>
+
+    </main>
+
+    <footer id="contact-footer">
+        <div class="container">
+            <div class="socials">
+                <a href="https://wa.me/971547021511" target="_blank" class="social-icon" title="Chat on WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.506-.669-.516l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487 2.982 1.288 2.982.858 3.527.794.644-.075 1.387-.568 1.583-1.116.196-.549.196-1.018.138-1.117z" />
+                    </svg>
+                </a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                ZOZ INNOVATIONS FZCO<br>
+                Dubai Silicon Oasis<br>
+                Dubai, United Arab Emirates<br>
+                <a href="mailto:info@zozinnovations.com" style="color: var(--accent-color); text-decoration: none; margin-top: 8px; display: inline-block;">info@zozinnovations.com</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.8rem; color: #555;">&copy; 2026 ZOZ INNOVATIONS FZCO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating PDF button -->
+    <a class="print-btn" href="/company-profile.pdf" download="ZOZ-Innovations-Company-Profile.pdf">↓ Download PDF</a>
+
+    <script>
+        // Remind user to enable background graphics for best PDF output
+        window.addEventListener('beforeprint', () => {
+            const msg = document.getElementById('print-tip');
+            if (msg) msg.style.display = 'block';
+        });
+        window.addEventListener('afterprint', () => {
+            const msg = document.getElementById('print-tip');
+            if (msg) msg.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
