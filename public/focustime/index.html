@@ -186,6 +186,8 @@
       position: relative;
       flex-shrink: 0;
       transition: transform 0.4s ease;
+      will-change: transform;
+      transform: translateZ(0);
     }
     .phone-wrap:hover { z-index: 10; }
 
@@ -230,7 +232,9 @@
       object-fit: cover;
       object-position: top center;
       display: block;
-      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     /* FEATURES */
@@ -570,6 +574,9 @@
   <a href="https://apps.apple.com/app/focustime-daily/id6748130306" class="store-btn" target="_blank">
     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
   </a>
+  <p style="margin-top:16px; font-size:13px; color:var(--muted); letter-spacing:0.02em;">
+    Free to download &nbsp;·&nbsp; Pro from $2.99/mo
+  </p>
 </section>
 
 <!-- PHONES -->
