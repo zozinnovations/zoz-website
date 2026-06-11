@@ -1,6 +1,17 @@
 :80 {
-  root * /srv
-  encode gzip
-  file_server
-  try_files {path} /index.html
+  @focustime host focustime.zozinnovations.com
+
+  handle @focustime {
+    root * /srv/focustime
+    encode gzip
+    file_server
+    try_files {path} {path}.html /index.html
+  }
+
+  handle {
+    root * /srv
+    encode gzip
+    file_server
+    try_files {path} /index.html
+  }
 }
