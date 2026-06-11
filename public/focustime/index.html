@@ -1,104 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FocusTime Daily — Focus Timer for Deep Work</title>
-    <meta name="description" content="FocusTime Daily is the focus timer for people who take their time seriously. Sessions for reading, creating, building, and connecting." />
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusTime Daily — Focus Timer for Deep Work</title>
+  <meta name="description" content="The focus timer for people who take their time seriously. Sessions for reading, creating, building, and connecting — with a calm, beautiful interface." />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            background: #0a0a0a;
-            color: #e8e4dc;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 16px;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 48px 24px;
-        }
+    :root {
+      --bg: #070d09;
+      --bg2: #0c1610;
+      --surface: #111f15;
+      --border: #1c2e20;
+      --text: #edeae2;
+      --muted: #6b8270;
+      --accent: #5c8f6a;
+      --accent-light: #7db88c;
+    }
 
-        .container {
-            max-width: 560px;
-            text-align: center;
-        }
+    html { scroll-behavior: smooth; }
 
-        .app-label {
-            font-size: 12px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #666;
-            margin-bottom: 24px;
-        }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        h1 {
-            font-size: clamp(32px, 6vw, 52px);
-            font-weight: 500;
-            font-family: Georgia, 'Times New Roman', serif;
-            color: #f0ece4;
-            margin-bottom: 20px;
-            line-height: 1.15;
-        }
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(7, 13, 9, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
 
-        p {
-            font-size: 17px;
-            color: #888;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
+    .nav-logo {
+      font-family: Georgia, serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
 
-        .badge {
-            display: inline-block;
-        }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
 
-        .badge img {
-            height: 52px;
-            border-radius: 12px;
-        }
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+    }
 
-        .links {
-            margin-top: 48px;
-            font-size: 13px;
-            color: #444;
-        }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(60, 110, 70, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-        .links a {
-            color: #666;
-            text-decoration: none;
-            margin: 0 12px;
-        }
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 28px;
+      padding: 6px 14px;
+      border: 1px solid rgba(92, 143, 106, 0.25);
+      border-radius: 100px;
+    }
 
-        .links a:hover {
-            color: #e8e4dc;
-        }
-    </style>
+    .hero-label span {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(44px, 7vw, 88px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 44px;
+    }
+
+    .store-badge {
+      display: inline-block;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .store-badge:hover { transform: scale(1.03); opacity: 0.9; }
+    .store-badge img { height: 52px; }
+
+    /* PHONES */
+    .phones-section {
+      padding: 80px 24px 100px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phones-section::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 180px;
+      background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .phone-wrap {
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .phone-wrap:hover { transform: translateY(-12px) !important; }
+
+    .phone-wrap.left {
+      transform: rotate(-6deg) translateX(40px) translateY(40px);
+      z-index: 1;
+    }
+
+    .phone-wrap.center {
+      transform: translateY(0);
+      z-index: 3;
+    }
+
+    .phone-wrap.right {
+      transform: rotate(6deg) translateX(-40px) translateY(40px);
+      z-index: 1;
+    }
+
+    .phone-frame {
+      width: 220px;
+      height: 476px;
+      border-radius: 44px;
+      border: 7px solid #1e2e22;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 40px 100px rgba(0,0,0,0.7),
+        inset 0 1px 0 rgba(255,255,255,0.06);
+      background: #0a100c;
+    }
+
+    .phone-frame.large {
+      width: 260px;
+      height: 562px;
+      border-radius: 52px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.06),
+        0 60px 120px rgba(0,0,0,0.8),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+
+    .phone-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    /* FEATURES */
+    .features {
+      padding: 100px 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .features-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 16px;
+    }
+
+    .features-header h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .feature {
+      background: var(--surface);
+      padding: 40px 32px;
+      border: 1px solid var(--border);
+    }
+
+    .feature:first-child { border-radius: 20px 0 0 20px; }
+    .feature:last-child { border-radius: 0 20px 20px 0; }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(92, 143, 106, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-family: Georgia, serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* SCREENSHOTS ROW */
+    .screens-section {
+      padding: 80px 0 100px;
+      overflow: hidden;
+    }
+
+    .screens-header {
+      text-align: center;
+      padding: 0 24px;
+      margin-bottom: 60px;
+    }
+
+    .screens-header h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .screens-scroll {
+      display: flex;
+      gap: 20px;
+      padding: 20px 60px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .screens-scroll::-webkit-scrollbar { display: none; }
+
+    .screen-item {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+
+    .screen-phone {
+      width: 200px;
+      height: 433px;
+      border-radius: 40px;
+      border: 6px solid #1a2b1e;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      background: #0a100c;
+    }
+
+    .screen-phone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .screen-caption {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* PRO */
+    .pro-section {
+      padding: 100px 24px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .pro-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      border: 1px solid rgba(92, 143, 106, 0.3);
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .pro-section h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .pro-section p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .pro-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 48px;
+      text-align: left;
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pro-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .pro-list li::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(92, 143, 106, 0.15);
+      border: 1px solid rgba(92, 143, 106, 0.3);
+      flex-shrink: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%237db88c' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 12px;
+    }
+
+    .pricing-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 28px;
+      text-align: center;
+      min-width: 140px;
+    }
+
+    .price-card.featured {
+      border-color: rgba(92, 143, 106, 0.4);
+      background: rgba(92, 143, 106, 0.07);
+    }
+
+    .price-period {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .price-amount {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .price-tag {
+      font-size: 11px;
+      color: var(--accent-light);
+      margin-top: 6px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .cta-btn:hover { transform: scale(1.02); opacity: 0.92; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #333;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      nav { padding: 16px 20px; }
+
+      .phones-section {
+        gap: 0;
+        padding: 40px 0 80px;
+      }
+
+      .phone-frame { width: 160px; height: 346px; border-radius: 32px; }
+      .phone-frame.large { width: 190px; height: 411px; border-radius: 38px; }
+
+      .phone-wrap.left { transform: rotate(-5deg) translateX(28px) translateY(30px); }
+      .phone-wrap.right { transform: rotate(5deg) translateX(-28px) translateY(30px); }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+      .feature:first-child { border-radius: 20px 20px 0 0; }
+      .feature:last-child { border-radius: 0 0 20px 20px; }
+
+      .pricing-row { flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <p class="app-label">ZOZ Innovations</p>
 
-        <h1>FocusTime Daily</h1>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">FocusTime Daily</div>
+    <a href="https://apps.apple.com/app/focustime-daily/id6748130306" class="nav-cta" target="_blank">
+      ↓ App Store
+    </a>
+  </nav>
 
-        <p>The focus timer for people who take their time seriously.<br>
-        Sessions for reading, creating, building, and connecting —<br>
-        with a calm, beautiful interface.</p>
-
-        <div class="badge">
-            <a href="https://apps.apple.com/app/focustime-daily/id6748130306" target="_blank">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
-            </a>
-        </div>
-
-        <div class="links">
-            <a href="/focustime/privacy">Privacy Policy</a>
-            <a href="mailto:info@zozinnovations.com">Support</a>
-            <a href="https://zozinnovations.com">ZOZ Innovations</a>
-        </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label">
+      <span></span>
+      Now available on the App Store
     </div>
+    <h1>Your time.<br><em>Yours alone.</em></h1>
+    <p class="hero-sub">The focus timer for people who take their time seriously. Sessions for reading, creating, building, and connecting.</p>
+    <a href="https://apps.apple.com/app/focustime-daily/id6748130306" class="store-badge" target="_blank">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+    </a>
+  </section>
+
+  <!-- PHONES -->
+  <section class="phones-section">
+    <div class="phone-wrap left">
+      <div class="phone-frame">
+        <img src="/screens/home.png" alt="FocusTime Daily Home" />
+      </div>
+    </div>
+    <div class="phone-wrap center">
+      <div class="phone-frame large">
+        <img src="/screens/timer.png" alt="FocusTime Daily Timer" />
+      </div>
+    </div>
+    <div class="phone-wrap right">
+      <div class="phone-frame">
+        <img src="/screens/complete.png" alt="FocusTime Daily Session Complete" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-header">
+      <p class="section-label">How it works</p>
+      <h2>One rhythm.<br>Every day.</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">⏱</div>
+        <h3>Choose a rhythm</h3>
+        <p>Read, Create, Build, Connect, or Reset. Pick what matters and set your intention for the session.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⬤</div>
+        <h3>Deep focus sessions</h3>
+        <p>A clean timer with no distractions. Just you, the work, and the time you've committed to it.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">◎</div>
+        <h3>Track what counts</h3>
+        <p>See your daily focus time at a glance. Build consistency over time with gentle, honest tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS SCROLL -->
+  <section class="screens-section">
+    <div class="screens-header">
+      <p class="section-label">Every screen, considered</p>
+      <h2>Quiet. Beautiful. Yours.</h2>
+    </div>
+    <div class="screens-scroll">
+      <div class="screen-item">
+        <div class="screen-phone"><img src="/screens/home.png" alt="Home" /></div>
+        <p class="screen-caption">Choose your rhythm</p>
+      </div>
+      <div class="screen-item">
+        <div class="screen-phone"><img src="/screens/timer.png" alt="Timer" /></div>
+        <p class="screen-caption">Deep focus</p>
+      </div>
+      <div class="screen-item">
+        <div class="screen-phone"><img src="/screens/complete.png" alt="Complete" /></div>
+        <p class="screen-caption">Session complete</p>
+      </div>
+      <div class="screen-item">
+        <div class="screen-phone"><img src="/screens/settings.png" alt="Settings" /></div>
+        <p class="screen-caption">Pro features</p>
+      </div>
+      <div class="screen-item">
+        <div class="screen-phone"><img src="/screens/paywall.png" alt="Focus Pro" /></div>
+        <p class="screen-caption">Focus Pro</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO -->
+  <section class="pro-section">
+    <div class="pro-badge">Focus Pro</div>
+    <h2>Go deeper.<br>Stay longer.</h2>
+    <p>Unlock the full experience — designed for people who take their time seriously.</p>
+
+    <ul class="pro-list">
+      <li>Quiet Clarity — a calm, immersive theme</li>
+      <li>Silent Reminder — an evening nudge</li>
+      <li>Weekly Reflection — begin each week with intention</li>
+      <li>Stay with it — keep your rhythm steady</li>
+      <li>7-day free trial, then from $2.99/month</li>
+    </ul>
+
+    <div class="pricing-row">
+      <div class="price-card">
+        <p class="price-period">Monthly</p>
+        <p class="price-amount">$2.99</p>
+      </div>
+      <div class="price-card featured">
+        <p class="price-period">Yearly</p>
+        <p class="price-amount">$19.99</p>
+        <p class="price-tag">Best value</p>
+      </div>
+    </div>
+
+    <a href="https://apps.apple.com/app/focustime-daily/id6748130306" class="cta-btn" target="_blank">
+      Download Free
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-logo">FocusTime Daily</p>
+      <div class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="mailto:info@zozinnovations.com">Support</a>
+        <a href="https://zozinnovations.com">ZOZ Innovations</a>
+      </div>
+      <p class="footer-copy">© 2026 ZOZ Innovations FZCO. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
