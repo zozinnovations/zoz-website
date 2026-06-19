@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -339,7 +340,7 @@ footer {
 #project-sugar-tax {
     background-image: url('/sugar-tax-bg.webp');
     background-size: cover;
-    background-position: top center;
+    background-position: center left;
 }
 
 #project-resonance {
