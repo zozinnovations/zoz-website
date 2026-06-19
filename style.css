@@ -349,8 +349,7 @@ footer {
 }
 
 #project-focustime {
-    background-image: url('/focustime/screens/timer.png');
-    background-size: 120%;
+    background-image: url('/focustime-bg.png');
+    background-size: cover;
     background-position: center center;
-    image-rendering: -webkit-optimize-contrast;
 }
