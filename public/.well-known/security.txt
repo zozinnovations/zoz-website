@@ -1,0 +1,4 @@
+Contact: mailto:zozinnovations@gmail.com
+Expires: 2027-06-22T00:00:00.000Z
+Preferred-Languages: en, de
+Canonical: https://zozinnovations.com/.well-known/security.txt
