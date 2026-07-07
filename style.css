@@ -206,6 +206,106 @@ section {
     font-size: 0.95rem;
 }
 
+/* Exit-intent lead-capture modal */
+.lead-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.lead-modal[hidden] { display: none; }
+.lead-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(2px);
+}
+.lead-modal__card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: leadIn 0.25s ease;
+}
+@keyframes leadIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+.lead-modal__x {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.lead-modal__x:hover { color: var(--text-primary); }
+.lead-modal__title { font-size: 1.5rem; margin-bottom: 10px; }
+.lead-modal__sub { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
+.lead-modal__form { display: flex; flex-direction: column; gap: 10px; }
+.lead-modal__input {
+    width: 100%;
+    padding: 13px 14px;
+    background: var(--bg-color);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+}
+.lead-modal__input:focus { outline: none; border-color: var(--accent-color); }
+.lead-modal__submit {
+    margin-top: 4px;
+    background: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+    cursor: pointer;
+}
+.lead-modal__closer { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px; }
+.lead-modal__privacy { text-align: center; font-size: 0.75rem; color: #666; }
+.lead-modal__success { color: var(--accent-color); font-size: 1rem; text-align: center; padding: 10px 0; }
+.lead-modal__decline {
+    display: block;
+    margin: 14px auto 0;
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.lead-modal__decline:hover { color: var(--text-secondary); }
+@media (max-width: 480px) {
+    .lead-modal__card { padding: 26px 20px; }
+    .lead-modal__title { font-size: 1.3rem; }
+}
+
+/* Ad-creative proof thumbnails (AI Videos card) */
+.ad-proof {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+.ad-proof__vid {
+    width: 50%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #000;
+    border: 1px solid rgba(255, 85, 0, 0.15);
+    cursor: pointer;
+}
+
 /* 4-column grid for services (desktop) */
 .grid-4col {
     grid-template-columns: repeat(4, 1fr);
