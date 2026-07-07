@@ -271,8 +271,10 @@ section {
     border-color: var(--accent-color);
     cursor: pointer;
 }
-.lead-modal__closer { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px; }
-.lead-modal__privacy { text-align: center; font-size: 0.75rem; color: #666; }
+.lead-modal__proof { text-align: center; font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px; }
+.lead-modal__alt { text-align: center; font-size: 0.8rem; color: #777; }
+.lead-modal__alt a { color: var(--accent-color); text-decoration: none; }
+.lead-modal__alt a:hover { text-decoration: underline; }
 .lead-modal__success { color: var(--accent-color); font-size: 1rem; text-align: center; padding: 10px 0; }
 .lead-modal__decline {
     display: block;
