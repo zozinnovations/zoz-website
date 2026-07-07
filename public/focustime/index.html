@@ -917,10 +917,10 @@
   <h2 class="section-title">As seen on social</h2>
   <div class="testi-grid">
 
-    <div class="testi-item" data-video="/focustime/adds/ayoon_focustime.mp4" data-name="Ayoon">
+    <div class="testi-item" data-video="/adds/ayoon_focustime.mp4" data-name="Ayoon">
       <div class="testi-phone">
-        <video muted loop playsinline preload="metadata">
-          <source src="/focustime/adds/ayoon_focustime.mp4" type="video/mp4" />
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/adds/ayoon_focustime.mp4" type="video/mp4" />
         </video>
         <div class="testi-play">
           <div class="testi-play-btn">
@@ -933,10 +933,10 @@
       <p class="testi-name">@ayoon</p>
     </div>
 
-    <div class="testi-item" data-video="/focustime/adds/zena_focustime.mp4" data-name="Zena">
+    <div class="testi-item" data-video="/adds/zena_focustime.mp4" data-name="Zena">
       <div class="testi-phone">
-        <video muted loop playsinline preload="metadata">
-          <source src="/focustime/adds/zena_focustime.mp4" type="video/mp4" />
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/adds/zena_focustime.mp4" type="video/mp4" />
         </video>
         <div class="testi-play">
           <div class="testi-play-btn">
@@ -1017,11 +1017,6 @@
     // Hero video autoplay
     var heroVideo = document.querySelector('.hero-phone video');
     if (heroVideo) { heroVideo.muted = true; heroVideo.play().catch(function(){}); }
-
-    // Testimonial thumbnail loop preview
-    document.querySelectorAll('.testi-phone video').forEach(function(v) {
-      v.play().catch(function(){});
-    });
 
     // Modal logic
     var modal = document.getElementById('videoModal');
