@@ -13,6 +13,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// FocusTime ad thumbnails -> video lightbox
+(function initAdVideoModal() {
+    const modal = document.getElementById('adVideoModal');
+    if (!modal) return;
+    const player = document.getElementById('adVideoPlayer');
+    const src = document.getElementById('adVideoSrc');
+
+    function open(url) {
+        src.src = url;
+        player.load();
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        player.play().catch(() => {});
+    }
+    function close() {
+        player.pause();
+        modal.hidden = true;
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.ad-proof__item').forEach(btn => {
+        btn.addEventListener('click', () => open(btn.getAttribute('data-video')));
+    });
+    modal.querySelectorAll('[data-vm-close]').forEach(el => el.addEventListener('click', close));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) close(); });
+})();
+
 // Exit-intent lead-capture popup
 (function initLeadModal() {
     const modal = document.getElementById('leadModal');

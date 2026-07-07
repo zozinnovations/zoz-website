@@ -296,13 +296,80 @@ section {
     gap: 8px;
     margin-bottom: 14px;
 }
-.ad-proof__vid {
+.ad-proof__item {
+    position: relative;
     width: 50%;
     aspect-ratio: 9 / 16;
-    object-fit: cover;
-    border-radius: 8px;
-    background: #000;
+    padding: 0;
     border: 1px solid rgba(255, 85, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+}
+.ad-proof__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.ad-proof__play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+.ad-proof__play svg {
+    width: 42px;
+    height: 42px;
+    fill: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    padding: 9px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.ad-proof__item:hover .ad-proof__play svg {
+    transform: scale(1.08);
+    background: var(--accent-color);
+}
+
+/* Ad video lightbox */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.video-modal[hidden] { display: none; }
+.video-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+}
+.video-modal__content { position: relative; }
+.video-modal__content video {
+    max-height: 85vh;
+    max-width: 90vw;
+    width: auto;
+    border-radius: 12px;
+    display: block;
+    background: #000;
+}
+.video-modal__close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
     cursor: pointer;
 }
 
