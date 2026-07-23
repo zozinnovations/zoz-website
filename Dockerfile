@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # Production Stage
-FROM caddy:2.8-alpine
+FROM caddy:2.11-alpine
 
 RUN apk update && apk upgrade --no-cache
 
