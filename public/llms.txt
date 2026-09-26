@@ -1,0 +1,38 @@
+# ZOZ INNOVATIONS FZCO
+
+> Technology studio and AI development company based in Dubai, UAE. We design, build, and deploy production-ready AI products, native mobile applications, web platforms, and automated business workflows.
+
+## About the Organization
+- **Legal Name**: ZOZ INNOVATIONS FZCO
+- **Jurisdiction & License**: IFZA Licensed (Dubai Silicon Oasis, Dubai, United Arab Emirates)
+- **Primary Focus**: AI Product Engineering, iOS Mobile App Development, High-Performance Web Development, AI Automation
+- **Website**: https://zozinnovations.com
+- **Contact**: info@zozinnovations.com | WhatsApp: +971 54 702 1511
+
+## Core Services & Capabilities
+
+### 1. AI Tools & Custom Assistants
+- **AI Customer Support & Sales Agents**: Autonomous assistants that handle client inquiries, qualify leads, and book meetings 24/7 across Web and WhatsApp.
+- **Workflow Automation**: Tailored LLM-powered back-office workflows and data processing pipelines.
+- **AI Media & Video Generation**: Synthetic video production and generative marketing content for brands.
+
+### 2. Mobile App Development
+- **Native iOS / Swift Engineering**: Full-cycle development from product design to App Store publication.
+- **Rapid Prototyping & Launch**: MVPs launched to the App Store in 2–4 weeks.
+- **Production Reference**: FocusTime Daily (Focus & Productivity Timer live on Apple App Store).
+
+### 3. High-Performance Web & Platform Development
+- **Custom Web Platforms**: Modern, ultra-fast web applications built with modern frontend frameworks and containerized deployments.
+- **Interactive Calculators & Business Tools**: High-impact regional compliance and calculation tools.
+- **Production Reference**: Sugar Tax UAE (First comprehensive UAE Sugar Excise Tax Calculator at https://sugartaxuae.ae).
+
+## Key Projects & References
+- **FocusTime Daily**: Native iOS application on Apple App Store (https://focustime.zozinnovations.com)
+- **Sugar Tax UAE**: Free public calculator for UAE excise tax on sweetened beverages (https://sugartaxuae.ae)
+- **The Secret Life of Resonance**: Award-submitted AI film short (1 Billion Followers Summit submission)
+
+## Useful Links
+- [Company Profile & Capabilities](https://zozinnovations.com/company-profile.html)
+- [Blog: FocusTime Daily iOS Launch](https://zozinnovations.com/blog/focustime-daily-our-first-ios-app-on-the-app-store.html)
+- [Blog: UAE Sugar Tax 2026 Guide](https://zozinnovations.com/blog/uae-sugar-tax-2026-turning-complexity-into-clarity.html)
+- [Direct Contact via WhatsApp](https://wa.me/971547021511)
