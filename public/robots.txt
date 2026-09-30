@@ -1,28 +1,27 @@
 User-agent: *
 Allow: /
 
-# Explicit AI crawler permissions (GEO)
+# OpenAI (Live Search & Answers)
 User-agent: OAI-SearchBot
 Allow: /
-
 User-agent: GPTBot
 Allow: /
 
+# Anthropic Claude (Live Search & Crawler)
 User-agent: Claude-SearchBot
 Allow: /
-
 User-agent: Claude-User
 Allow: /
-
 User-agent: ClaudeBot
 Allow: /
 
+# Perplexity AI
 User-agent: PerplexityBot
 Allow: /
 
+# Google & Apple AI Systems
 User-agent: Google-Extended
 Allow: /
-
 User-agent: Applebot-Extended
 Allow: /
 
