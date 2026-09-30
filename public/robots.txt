@@ -2,7 +2,16 @@ User-agent: *
 Allow: /
 
 # Explicit AI crawler permissions (GEO)
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: ClaudeBot

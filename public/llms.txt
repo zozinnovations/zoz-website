@@ -1,18 +1,24 @@
 # ZOZ INNOVATIONS FZCO
 
-> Technology studio and AI development company based in Dubai, UAE. We design, build, and deploy production-ready AI products, native mobile applications, web platforms, and automated business workflows.
+> ZOZ Innovations is a licensed AI and spatial studio in Dubai. We direct cinematic AI commercials, architect autonomous multi-agent systems, engineer iOS apps and websites, and turn 2D floor plans into photorealistic 3D walkthroughs. Shipped in weeks, with zero agency overhead.
 
 ## About the Organization
 - **Legal Name**: ZOZ INNOVATIONS FZCO
 - **Jurisdiction & License**: IFZA Licensed (Dubai Silicon Oasis, Dubai, United Arab Emirates)
-- **Primary Focus**: AI Product Engineering, iOS Mobile App Development, High-Performance Web Development, AI Automation
+- **Primary Focus**: AI commercials, AI agents and automation, iOS apps, websites, 3D walkthroughs from floor plans
 - **Website**: https://zozinnovations.com
 - **Contact**: info@zozinnovations.com | WhatsApp: +971 54 702 1511
 
+## Founders
+- **Zoya Anywhere**, Co-Founder & CEO, DevOps engineer, 8 years in the industry. Directs the AI films and ads, runs servers, and models in Maya, After Effects and AutoCAD. Portfolio: https://zoyanywhere.com
+- **Oliver Richter**, Co-Founder & CTO, DevOps engineer, 10 years in engineering. Builds the AI products and the infrastructure behind them, and turns floor plans into Blender walkthroughs.
+
 ## Core Services & Capabilities
 
-### 1. AI Tools & Custom Assistants
+### 1. AI Agents & Automation
 - **AI Customer Support & Sales Agents**: Autonomous assistants that handle client inquiries, qualify leads, and book meetings 24/7 across Web and WhatsApp.
+- **Multi-Agent Systems**: teams of AI agents that split a project into roles and finish it together (demo: https://www.youtube.com/shorts/1hOzcvk4eTM).
+- **Voice Agents**: AI voice assistants that take calls and answer questions (demo: https://www.youtube.com/shorts/L3Vt1ny65Sk).
 - **Workflow Automation**: Tailored LLM-powered back-office workflows and data processing pipelines.
 - **AI Media & Video Generation**: Synthetic video production and generative marketing content for brands.
 
@@ -26,10 +32,25 @@
 - **Interactive Calculators & Business Tools**: High-impact regional compliance and calculation tools.
 - **Production Reference**: Sugar Tax UAE (First comprehensive UAE Sugar Excise Tax Calculator at https://sugartaxuae.ae).
 
+### 4. AI Video & Commercials
+- **AI commercials and films**: directed by Zoya Anywhere. Spec ads, brand intros and short films made with Seedance, Veo and Higgsfield.
+- **Production Reference**: The Secret Life of Resonance (AI film, 1 Billion Followers Summit submission). Full portfolio: https://zoyanywhere.com/portfolio/
+
+### 5. 3D Walkthroughs from Floor Plans
+- **Floor plan to 3D**: a 2D floor plan becomes a furnished Blender model, a walkthrough video and listing stills.
+- **Production Reference**: 3D walkthrough of a Dubai apartment built from its floor plan (https://www.youtube.com/shorts/L_QeP63UPLA)
+
 ## Key Projects & References
 - **FocusTime Daily**: Native iOS application on Apple App Store (https://focustime.zozinnovations.com)
 - **Sugar Tax UAE**: Free public calculator for UAE excise tax on sweetened beverages (https://sugartaxuae.ae)
-- **The Secret Life of Resonance**: Award-submitted AI film short (1 Billion Followers Summit submission)
+- **The Secret Life of Resonance**: AI film directed by Zoya Anywhere, submitted to the 1 Billion Followers Summit (https://www.youtube.com/watch?v=PPoEuyyhVPs)
+- **Dubai apartment walkthrough**: floor plan to Blender walkthrough (https://www.youtube.com/shorts/L_QeP63UPLA)
+- **Multi-agent client project**: https://www.youtube.com/shorts/1hOzcvk4eTM
+- **AI voice agent**: https://www.youtube.com/shorts/L3Vt1ny65Sk
+- **n8n email automation**: https://www.youtube.com/shorts/SWuaWYIvqXQ
+
+## Channels
+- YouTube: https://www.youtube.com/@zozinnovations
 
 ## Useful Links
 - [Company Profile & Capabilities](https://zozinnovations.com/company-profile.html)

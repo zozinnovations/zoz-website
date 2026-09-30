@@ -377,12 +377,19 @@ section {
 
 /* 4-column grid for services (desktop) */
 .grid-4col {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-4col > * {
+    flex: 1 1 280px;
+    max-width: 340px;
 }
 
 @media (max-width: 768px) {
-    .grid-4col {
-        grid-template-columns: 1fr;
+    .grid-4col > * {
+        max-width: none;
     }
 }
 
