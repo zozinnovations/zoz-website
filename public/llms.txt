@@ -21,7 +21,7 @@
 - Rapid visual iteration and asset generation pipelines with delivery in days.
 
 ### 2. Autonomous Multi-Agent Systems & Distributed Automation
-- Production deployment of collaborative, role-based AI agent frameworks that autonomously execute complex operational workflows and multi-step data pipelines.
+- Production deployment of collaborative, role-based AI agent frameworks (LangGraph, CrewAI) that autonomously execute complex operational workflows and multi-step data pipelines.
 - Enterprise-grade backend infrastructure, deterministic tool-calling agents, and tailored retrieval workflows built to remove organizational bottlenecks.
 
 ### 3. AI 3D, Spatial Media & Architectural Walkthroughs
@@ -39,7 +39,6 @@
 - [Dubai Apartment 3D Walkthrough](https://www.youtube.com/shorts/L_QeP63UPLA): Architectural 2D floor plan transformed into a photorealistic Blender walkthrough video.
 - [Multi-Agent System Pipeline](https://www.youtube.com/shorts/1hOzcvk4eTM): Demonstration of collaborative AI agents executing multi-step project tasks.
 - [Voice Agent Automation](https://www.youtube.com/shorts/L3Vt1ny65Sk): Demonstration of deterministic AI voice processing.
-- [n8n Automation Pipeline](https://www.youtube.com/shorts/SWuaWYIvqXQ): Automated backend orchestration and data flow.
 
 ## Official Links & Resources
 - [Company Profile & Capabilities](https://zozinnovations.com/company-profile.html): Full studio profile, licensing, and technical capabilities.
