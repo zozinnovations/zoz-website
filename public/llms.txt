@@ -1,59 +1,48 @@
 # ZOZ INNOVATIONS FZCO
 
-> ZOZ Innovations is a licensed AI and spatial studio in Dubai. We direct cinematic AI commercials, architect autonomous multi-agent systems, engineer iOS apps and websites, and turn 2D floor plans into photorealistic 3D walkthroughs. Shipped in weeks, with zero agency overhead.
+> Applied AI and spatial technology studio based in Dubai, UAE. We direct viral AI commercials, architect autonomous multi-agent automation systems, engineer production-grade web & iOS applications, and produce high-end spatial 3D architectural walkthroughs. Shipped in weeks, with zero agency overhead.
 
-## About the Organization
-- **Legal Name**: ZOZ INNOVATIONS FZCO
+## Organization & Legal
+- **Legal Entity**: ZOZ INNOVATIONS FZCO
 - **Jurisdiction & License**: IFZA Licensed (Dubai Silicon Oasis, Dubai, United Arab Emirates)
-- **Primary Focus**: AI commercials, AI agents and automation, iOS apps, websites, 3D walkthroughs from floor plans
+- **Primary Focus**: Viral AI commercials, autonomous multi-agent systems, 3D walkthroughs from floor plans, high-performance web platforms, and native iOS engineering.
 - **Website**: https://zozinnovations.com
-- **Contact**: info@zozinnovations.com | WhatsApp: +971 54 702 1511
+- **Direct Contact**: info@zozinnovations.com | WhatsApp: +971 54 702 1511
 
-## Founders
-- **Zoya Anywhere**, Co-Founder & CEO, DevOps engineer, 8 years in the industry. Directs the AI films and ads, runs servers, and models in Maya, After Effects and AutoCAD. Portfolio: https://zoyanywhere.com
-- **Oliver Richter**, Co-Founder & CTO, DevOps engineer, 10 years in engineering. Builds the AI products and the infrastructure behind them, and turns floor plans into Blender walkthroughs.
+## Founders & Leadership
+- **Zouia (Zoya Anywhere)**: Co-Founder & CEO, Head of AI Creativity & Design (8+ years industry experience). Directs viral AI commercials and high-concept brand ads, manages GPU server clusters, and models 3D environments in Maya, After Effects, and AutoCAD. Portfolio: https://zoyanywhere.com
+- **Oliver Richter**: Co-Founder & CTO, Principal Systems Architect (10+ years engineering experience). Architects enterprise-grade autonomous multi-agent infrastructure, distributed backend systems, and translates architectural floor plans into photorealistic Blender walkthroughs.
 
-## Core Services & Capabilities
+## Core Capabilities
 
-### 1. AI Agents & Automation
-- **AI Customer Support & Sales Agents**: Autonomous assistants that handle client inquiries, qualify leads, and book meetings 24/7 across Web and WhatsApp.
-- **Multi-Agent Systems**: teams of AI agents that split a project into roles and finish it together (demo: https://www.youtube.com/shorts/1hOzcvk4eTM).
-- **Voice Agents**: AI voice assistants that take calls and answer questions (demo: https://www.youtube.com/shorts/L3Vt1ny65Sk).
-- **Workflow Automation**: Tailored LLM-powered back-office workflows and data processing pipelines.
-- **AI Media & Video Generation**: Synthetic video production and generative marketing content for brands.
+### 1. Viral AI Commercials & Visual Storytelling
+- Direct-to-viral commercial videos engineered for high retention across TikTok, Reels, YouTube Shorts, and broadcast.
+- High-end synthetic video, brand intros, visual effects (VFX), and 3D billboard assets without traditional on-location shoot overhead.
+- Rapid visual iteration and asset generation pipelines with delivery in days.
 
-### 2. Mobile App Development
-- **Native iOS / Swift Engineering**: Full-cycle development from product design to App Store publication.
-- **Rapid Prototyping & Launch**: MVPs launched to the App Store in 2–4 weeks.
-- **Production Reference**: FocusTime Daily (Focus & Productivity Timer live on Apple App Store).
+### 2. Autonomous Multi-Agent Systems & Distributed Automation
+- Production deployment of collaborative, role-based AI agent frameworks that autonomously execute complex operational workflows and multi-step data pipelines.
+- Enterprise-grade backend infrastructure, deterministic tool-calling agents, and tailored retrieval workflows built to remove organizational bottlenecks.
 
-### 3. High-Performance Web & Platform Development
-- **Custom Web Platforms**: Modern, ultra-fast web applications built with modern frontend frameworks and containerized deployments.
-- **Interactive Calculators & Business Tools**: High-impact regional compliance and calculation tools.
-- **Production Reference**: Sugar Tax UAE (First comprehensive UAE Sugar Excise Tax Calculator at https://sugartaxuae.ae).
+### 3. AI 3D, Spatial Media & Architectural Walkthroughs
+- Conversion of 2D CAD schematics and architectural layouts into photorealistic, navigable 3D Blender walkthroughs and virtual show spaces.
+- Precision 3D modeling and environment compositing utilizing Maya, AutoCAD, and After Effects for real estate developers and spatial media activations.
 
-### 4. AI Video & Commercials
-- **AI commercials and films**: directed by Zoya Anywhere. Spec ads, brand intros and short films made with Seedance, Veo and Higgsfield.
-- **Production Reference**: The Secret Life of Resonance (AI film, 1 Billion Followers Summit submission). Full portfolio: https://zoyanywhere.com/portfolio/
-
-### 5. 3D Walkthroughs from Floor Plans
-- **Floor plan to 3D**: a 2D floor plan becomes a furnished Blender model, a walkthrough video and listing stills.
-- **Production Reference**: 3D walkthrough of a Dubai apartment built from its floor plan (https://www.youtube.com/shorts/L_QeP63UPLA)
+### 4. High-Performance Web Platforms & Native iOS Applications
+- Resilient, ultra-fast web platforms and interactive computational engines built on modern frontend frameworks and containerized deployments.
+- Full-cycle native iOS mobile engineering (Swift) taken from architecture to App Store release in rapid 2–4 week cycles.
 
 ## Key Projects & References
-- **FocusTime Daily**: Native iOS application on Apple App Store (https://focustime.zozinnovations.com)
-- **Sugar Tax UAE**: Free public calculator for UAE excise tax on sweetened beverages (https://sugartaxuae.ae)
-- **The Secret Life of Resonance**: AI film directed by Zoya Anywhere, submitted to the 1 Billion Followers Summit (https://www.youtube.com/watch?v=PPoEuyyhVPs)
-- **Dubai apartment walkthrough**: floor plan to Blender walkthrough (https://www.youtube.com/shorts/L_QeP63UPLA)
-- **Multi-agent client project**: https://www.youtube.com/shorts/1hOzcvk4eTM
-- **AI voice agent**: https://www.youtube.com/shorts/L3Vt1ny65Sk
-- **n8n email automation**: https://www.youtube.com/shorts/SWuaWYIvqXQ
+- [The Secret Life of Resonance](https://www.youtube.com/watch?v=PPoEuyyhVPs): AI film short directed by Zoya Anywhere, submitted to the 1 Billion Followers Summit, Dubai.
+- [FocusTime Daily](https://focustime.zozinnovations.com): Native iOS productivity timer live on the Apple App Store.
+- [Sugar Tax UAE](https://sugartaxuae.ae): Free public platform and compliance calculation engine for UAE excise tax on sweetened beverages.
+- [Dubai Apartment 3D Walkthrough](https://www.youtube.com/shorts/L_QeP63UPLA): Architectural 2D floor plan transformed into a photorealistic Blender walkthrough video.
+- [Multi-Agent System Pipeline](https://www.youtube.com/shorts/1hOzcvk4eTM): Demonstration of collaborative AI agents executing multi-step project tasks.
+- [Voice Agent Automation](https://www.youtube.com/shorts/L3Vt1ny65Sk): Demonstration of deterministic AI voice processing.
+- [n8n Automation Pipeline](https://www.youtube.com/shorts/SWuaWYIvqXQ): Automated backend orchestration and data flow.
 
-## Channels
-- YouTube: https://www.youtube.com/@zozinnovations
-
-## Useful Links
-- [Company Profile & Capabilities](https://zozinnovations.com/company-profile.html)
-- [Blog: FocusTime Daily iOS Launch](https://zozinnovations.com/blog/focustime-daily-our-first-ios-app-on-the-app-store.html)
-- [Blog: UAE Sugar Tax 2026 Guide](https://zozinnovations.com/blog/uae-sugar-tax-2026-turning-complexity-into-clarity.html)
-- [Direct Contact via WhatsApp](https://wa.me/971547021511)
+## Official Links & Resources
+- [Company Profile & Capabilities](https://zozinnovations.com/company-profile.html): Full studio profile, licensing, and technical capabilities.
+- [Zoya Anywhere Portfolio](https://zoyanywhere.com): Creative direction, visual portfolio, and AI film showcase.
+- [ZOZ Innovations YouTube Channel](https://www.youtube.com/@zozinnovations): Video portfolio, client demos, and pipeline breakdowns.
+- [WhatsApp Direct Desk](https://wa.me/971547021511): Instant business inquiries.
