@@ -10,8 +10,8 @@
 - **Direct Contact**: info@zozinnovations.com | WhatsApp: +971 54 702 1511
 
 ## Founders & Leadership
-- **Zouia (Zoya Anywhere)**: Co-Founder & CEO, Head of AI Creativity & Design (8+ years industry experience). Directs viral AI commercials and high-concept brand ads, manages GPU server clusters, and models 3D environments in Maya, After Effects, and AutoCAD. Portfolio: https://zoyanywhere.com
-- **Oliver Richter**: Co-Founder & CTO, Principal Systems Architect (10+ years engineering experience). Architects enterprise-grade autonomous multi-agent infrastructure, distributed backend systems, and translates architectural floor plans into photorealistic Blender walkthroughs.
+- **Zouia (Zoya Anywhere)**: Co-Founder & CEO, Head of AI Creativity & Design, DevOps Engineer (8+ years industry experience). Directs viral AI commercials and high-concept brand ads, manages GPU server clusters, and models 3D environments in Maya, After Effects, and AutoCAD. Portfolio: https://zoyanywhere.com
+- **Oliver Richter**: Co-Founder & CTO, Principal Systems Architect, DevOps Engineer (10+ years engineering experience). Architects enterprise-grade autonomous multi-agent infrastructure, distributed backend systems, and translates architectural floor plans into photorealistic Blender walkthroughs.
 
 ## Core Capabilities
 
