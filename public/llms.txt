@@ -33,7 +33,7 @@
 - Full-cycle native iOS mobile engineering (Swift) taken from architecture to App Store release in rapid 2–4 week cycles.
 
 ## Key Projects & References
-- [The Secret Life of Resonance](https://www.youtube.com/watch?v=PPoEuyyhVPs): AI film short directed by Zoya Anywhere, submitted to the 1 Billion Followers Summit, Dubai.
+- [The Secret Life of Resonance](https://www.youtube.com/watch?v=udbpoN4C_Gk): AI film short directed by Zoya Anywhere, submitted to the 1 Billion Followers Summit, Dubai.
 - [FocusTime Daily](https://focustime.zozinnovations.com): Native iOS productivity timer live on the Apple App Store.
 - [Sugar Tax UAE](https://sugartaxuae.ae): Free public platform and compliance calculation engine for UAE excise tax on sweetened beverages.
 - [Dubai Apartment 3D Walkthrough](https://www.youtube.com/shorts/L_QeP63UPLA): Architectural 2D floor plan transformed into a photorealistic Blender walkthrough video.
